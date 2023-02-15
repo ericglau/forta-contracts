@@ -35,11 +35,9 @@ const getDefaultDeployer = async (provider, baseDeployer) => {
  *********************************************************************************************************************/
 class AsyncConf extends Conf {
     constructor(conf) {
-        /* TODO: uncomment when this is solved https://github.com/OpenZeppelin/openzeppelin-upgrades/issues/645
         if (conf.configName === '.cache-31337') {
             conf.configName = `.cache-31337_${process.pid}`;
         }
-        */
         super(conf);
         this.limit = pLimit(1);
     }
